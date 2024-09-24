@@ -1,0 +1,21 @@
+<library> ::= <task_list>
+
+<task_list> ::= <task> | <task> ";" <task_list>
+
+<task> ::= <add_book> | <borrow_book> | <return_book> | <view_inventory>
+
+<add_book> ::= "add_book" "(" <book_title> "," <category> ")"
+
+<borrow_book> ::= "borrow_book" "(" <book_title> ")"
+
+<return_book> ::= "return_book" "(" <book_title> ")"
+
+<view_inventory> ::= "view_inventory"
+
+<book_title> ::= <string>
+
+<category> ::= "Fiction" | "NonFiction" | "Science" | "History"
+
+<string> ::= <letter> | <letter> <string>
+
+<letter> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z"
